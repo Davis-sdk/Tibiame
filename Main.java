@@ -15,69 +15,69 @@ import javax.wireless.messaging.TextMessage;
 import net.rim.device.api.system.EventLogger;
 import net.rim.device.api.ui.Keypad;
 
-public class Main extends MIDlet implements .bp, .co, CommandListener, .m {
-   static final int MBOOSTER_MAX_INSTANCES = 1;
-   public static long a = 3830390889916145781L;
-   private final Command b;
-   private final Command c;
-   private final Display d;
-   private final Object e;
-   private final Object f;
-   private final tibiame.a g;
-   private final .ad h;
-   private final .ay i;
-   private Boolean j;
-   private volatile boolean k;
-   private Displayable l;
+public class Main extends MIDlet implements .bp, .co, CommandListener, .m{
+static final int MBOOSTER_MAX_INSTANCES=1;
+public static long a=3830390889916145781L;
+private final Command b;
+private final Command c;
+private final Display d;
+private final Object e;
+private final Object f;
+private final tibiame.a g;
+private final .ad h;
+private final .ay i;
+private Boolean j;
+private volatile boolean k;
+private Displayable l;
 
-   public Main() {
-      EventLogger.register(a, "TibiaMeBBTest", 2);
-      .h.x = Keypad.getHardwareLayout() != 1364346180 && Keypad.getHardwareLayout() != 1364341300;
-      this.f = new Object();
-      this.e = new Object();
-      this.d = Display.getDisplay(this);
-      this.g = new tibiame.a(this);
-      .bh.a((byte)0, .bh.b(this.getAppProperty("TibiaMe-Log-Trace")));
-      .bh.a((.bp)this);
-      this.i = new .bu();
+public Main(){
+        EventLogger.register(a,"TibiaMeBBTest",2);
+        .h.x=Keypad.getHardwareLayout()!=1364346180&&Keypad.getHardwareLayout()!=1364341300;
+        this.f=new Object();
+        this.e=new Object();
+        this.d=Display.getDisplay(this);
+        this.g=new tibiame.a(this);
+        .bh.a((byte)0,.bh.b(this.getAppProperty("TibiaMe-Log-Trace")));
+        .bh.a((.bp)this);
+        this.i=new.bu();
 
-      try {
-         this.i.i();
-      } catch (IOException var5) {
-         .bh.a((byte)2, 1380996919, (Throwable)var5);
-      }
+        try{
+        this.i.i();
+        }catch(IOException var5){
+        .bh.a((byte)2,1380996919,(Throwable)var5);
+        }
 
-      try {
-         if (!this.i.a((byte)15)) {
-            this.i.a((byte)15, true);
-            .cd[] var1 = new .cd[this.i.b()];
+        try{
+        if(!this.i.a((byte)15)){
+        this.i.a((byte)15,true);
+        .cd[]var1=new.cd[this.i.b()];
 
-            int var2;
-            for(var2 = 0; var2 < var1.length; ++var2) {
-               var1[var2] = this.i.b(var2);
-            }
+        int var2;
+        for(var2=0;var2<var1.length;++var2){
+        var1[var2]=this.i.b(var2);
+        }
 
-            for(var2 = var1.length - 1; var2 >= 0; --var2) {
-               try {
-                  this.i.a(var1[var2].b);
-               } catch (IOException var4) {
-               }
-            }
-         }
-      } catch (Throwable var6) {
-      }
+        for(var2=var1.length-1;var2>=0;--var2){
+        try{
+        this.i.a(var1[var2].b);
+        }catch(IOException var4){
+        }
+        }
+        }
+        }catch(Throwable var6){
+        }
 
-      this.h = (new .ag(this.i, this.e())).a((int)0, (String)"i18n-global.dat").a((int)4096, (String)"i18n-ingame.dat").a((int)8192, (String)"i18n-payment.dat");
-      this.b = new Command(this.h.a((short)56), 4, 0);
-      this.c = new Command(this.h.a((short)22), 7, 0);
-      tibiame.a.a(this.g, (new .ba()).a(16777215).b(true, true).a(true, true).b((new .v(this.h.a((short)1), (byte)0, 0)).b(true, true)));
-      this.f();
-      (new .br(this, true)).start();
-   }
+        this.h=(new.ag(this.i,this.e())).a((int)0,(String)"i18n-global.dat").a((int)4096,(String)"i18n-ingame.dat").a((int)8192,(String)"i18n-payment.dat");
+        this.b=new Command(this.h.a((short)56),4,0);
+        this.c=new Command(this.h.a((short)22),7,0);
+        tibiame.a.a(this.g,(new.ba()).a(16777215).b(true,true).a(true,true).b((new.v(this.h.a((short)1),(byte)0,0)).b(true,true)));
+        this.f();
+        (new.br(this,true)).start();
+        }
 
-   public static void a(String var0) {
-      EventLogger.logEvent(a, var0.getBytes(), 0);
-   }
+public static void a(String var0){
+        EventLogger.logEvent(a,var0.getBytes(),0);
+        }
 
    public final void commandAction(Command var1, Displayable var2) {
       if (var1.getCommandType() == 7) {
